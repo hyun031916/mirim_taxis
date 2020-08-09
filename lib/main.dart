@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         // This makes the visual dens
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
@@ -24,8 +24,42 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var _index = 0; //페이지 인덱스
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('복잡한 UI'),
+      ),
+      body:Center(
+        child:Text(
+          '$_index 페이지',
+          style: TextStyle(fontSize:40),
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: (index){
+          setState((){
+            _index = index;
+          });
+        },
+        currentIndex: _index,
+        items:<BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            title:Text("홈"),
+            icon:Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            title:Text("홈"),
+            icon:Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            title:Text("홈"),
+            icon:Icon(Icons.home),
+          ),
+        ]
+      ),
+    );
   }
 }
