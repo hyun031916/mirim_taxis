@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.white,
+        visualDensity:
         // This makes the visual dens
       ),
       home: MyHomePage(),
@@ -30,7 +31,16 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:Text('복잡한 UI'),
+        backgroundColor: Colors.white,
+        title:Text('복잡한 UI',
+        style:TextStyle(color:Colors.blueAccent)),
+        centerTitle: true,
+        actions:<Widget>[
+          IconButton(
+            icon: Icon(Icons.more_vert, color:Colors.amberAccent),
+            onPressed: (){},
+          )
+        ],
       ),
       body:Center(
         child:Text(
@@ -51,12 +61,12 @@ class _MyHomePageState extends State<MyHomePage> {
             icon:Icon(Icons.home),
           ),
           BottomNavigationBarItem(
-            title:Text("홈"),
-            icon:Icon(Icons.home),
+            title:Text("이용서비스"),
+            icon:Icon(Icons.assignment),
           ),
           BottomNavigationBarItem(
-            title:Text("홈"),
-            icon:Icon(Icons.home),
+            title:Text("내 정보"),
+            icon:Icon(Icons.account_circle),
           ),
         ]
       ),
