@@ -167,25 +167,24 @@ class Page1 extends StatelessWidget {
           height:200.0,
         autoPlay:true,
       ),
-      items: dummyItems.map((url)
-      {
-        return Builder(
-          builder:(BuildContext context){
-            return Container(
-              width:MediaQuery.of(context).size.width,
-              margin:EdgeInsets.symmetric(horizontal: 5.0),
-              decoration: BoxDecoration(
-                color:Colors.black12  //배경색
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child:Image.network(src)
-              ),
-            ),
-          },
-        )
-      }
-      ),
+//      items: dummyItems.map((url){
+//        return Builder(
+//          builder:(BuildContext context){
+//            return Container(
+//              width:MediaQuery.of(context).size.width,
+//              margin:EdgeInsets.symmetric(horizontal: 5.0),
+//              decoration: BoxDecoration(
+//                color:Colors.black12  //배경색
+//              ),
+//              child: ClipRRect(
+//                borderRadius: BorderRadius.circular(8.0),
+//                child:Image.network(src)
+//              ),
+//            ),
+//          },
+//        )
+//      }
+//      ),
     ),
   }
 
