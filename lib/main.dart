@@ -81,12 +81,25 @@ class _MyHomePageState extends State<MyHomePage> {
 class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child:Text(
-        '홈페이지',
-        style: TextStyle(fontSize:40),
-      )
+    return Column(
+      children: <Widget>[
+        _buildTop(),
+        _buildMiddle(),
+        _buildBottom(),
+      ],
     );
+  }
+
+  _buildTop() {
+    return Text('Top');
+  }
+
+  _buildMiddle(){
+    return Text('Middle');
+  }
+
+  _buildBottom() {
+    return Text('Buttom');
   }
 }
 
