@@ -208,7 +208,7 @@ class Page2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child:Text(
-          '페이지 2',
+          '페이지2',
           style: TextStyle(fontSize:40),
         )
     );
